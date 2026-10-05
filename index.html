@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinchu H S | Personal Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #fffafc, #f5fbff);
+            color: #444;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Flower decorations */
+        .flower {
+            position: fixed;
+            font-size: 45px;
+            opacity: 0.7;
+            z-index: 0;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .flower1 {
+            top: 30px;
+            left: 30px;
+        }
+
+        .flower2 {
+            top: 100px;
+            right: 40px;
+            animation-delay: 1s;
+        }
+
+        .flower3 {
+            bottom: 40px;
+            left: 50px;
+            animation-delay: 2s;
+        }
+
+        .flower4 {
+            bottom: 80px;
+            right: 50px;
+            animation-delay: 1.5s;
+        }
+
+        .flower5 {
+            top: 45%;
+            left: 15px;
+            font-size: 35px;
+            animation-delay: 0.5s;
+        }
+
+        .flower6 {
+            top: 55%;
+            right: 15px;
+            font-size: 35px;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(8deg);
+            }
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 950px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 25px;
+            padding: 45px;
+            box-shadow: 0 10px 35px rgba(150, 150, 180, 0.15);
+            border: 1px solid #f0e4ec;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #f1e2eb;
+        }
+
+        .profile-icon {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffdce9, #dff4ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            box-shadow: 0 8px 20px rgba(180, 160, 190, 0.18);
+        }
+
+        h1 {
+            color: #9b6b82;
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #777;
+            font-size: 17px;
+        }
+
+        /* Sections */
+        section {
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #a66f89;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        h2::before {
+            content: "🌸 ";
+        }
+
+        .about-text {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Information cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .info-card {
+            background: #fff8fb;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #f3dfe9;
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(180, 140, 160, 0.12);
+        }
+
+        .info-card strong {
+            display: block;
+            color: #9b6b82;
+            margin-bottom: 7px;
+            font-size: 15px;
+        }
+
+        .info-card span {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Interest */
+        .interest {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-top: 5px;
+            background: #eef9ff;
+            color: #66889b;
+            border-radius: 25px;
+            border: 1px solid #d9edf7;
+            font-size: 16px;
+        }
+
+        /* Quote */
+        .quote {
+            margin-top: 30px;
+            padding: 25px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff3f8, #effaff);
+            border-radius: 18px;
+            color: #777;
+            font-style: italic;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #f1e2eb;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 650px) {
+            .container {
+                width: 94%;
+                padding: 28px 20px;
+                margin: 20px auto;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flower {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Decorative flowers -->
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌷</div>
+    <div class="flower flower3">🌺</div>
+    <div class="flower flower4">🌼</div>
+    <div class="flower flower5">🌻</div>
+    <div class="flower flower6">🌸</div>
+
+    <div class="container">
+
+        <header>
+            <div class="profile-icon">🌷</div>
+
+            <h1>Sinchu H S</h1>
+
+            <p class="subtitle">
+                2nd Year Engineering Student | Computer Science & Engineering
+            </p>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+
+            <p class="about-text">
+                Hello! I am <strong>Sinchu H S</strong>, a 2nd year engineering
+                student pursuing Computer Science and Engineering. I am interested
+                in learning new technologies, improving my skills, and exploring
+                new places. I believe that every new experience gives us an
+                opportunity to learn something new.
+            </p>
+        </section>
+
+        <section>
+            <h2>My Details</h2>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <strong>👩‍💻 Name</strong>
+                    <span>Sinchu H S</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>🎓 Year</strong>
+                    <span>2nd Year Engineering</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>💻 Branch</strong>
+                    <span>Computer Science and Engineering (CSE)</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>🏫 College</strong>
+                    <span>Jain Institute of Technology, Davanagere</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>🏡 Native Place</strong>
+                    <span>Honnebhagi, Channagiri Taluk, Davanagere District</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>🌸 Interest</strong>
+                    <span>Travelling and exploring new places</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>My Hobby</h2>
+
+            <div class="interest">
+                ✈️ Travelling & Exploring New Places
+            </div>
+        </section>
+
+        <div class="quote">
+            "Life is a beautiful journey — explore it, enjoy it, and make every
+            moment memorable." 🌷✨
+        </div>
+
+        <footer>
+            Made with 💗 by Sinchu H S
+        </footer>
+
+    </div>
+
+</body>
+</html>
